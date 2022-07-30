@@ -1,0 +1,12 @@
+@import './config.css';
+@import './detail.css';
+@import './card.css';
+@import './navBar.css';
+@import './about.css';
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+

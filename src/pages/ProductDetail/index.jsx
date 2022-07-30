@@ -1,28 +1,36 @@
-import {useParams} from 'react-router-dom'
-import {useEffect, useState} from 'react'
-import {getProduct} from '../../services/products'
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+import { getProduct } from '../../services/products';
 
 function Detail() {
   const [product, setProduct] = useState({});
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
-    const result = await getProduct(id);
-    setProduct(result);
-    console.log(product);
-    }
-  fetchData();
-  },[]);
+      const result = await getProduct(id);
+      setProduct(result);
+    };
+    fetchData();
+  }, []);
 
   return (
-    <>
-      <h1>{`${product.title}`}</h1>
-      <img src={product.image}></img>
-      <h3>{product.category}</h3>
-      <p>{product.description}</p>
-      <p>{`$${product.price}`}</p>
-    </>
+    <div className='detail'>
+      <h1 className='detail__title'>{`${product.title}`}</h1>
+      <div className='detail__info'>
+        <div className='detail__imgContainer'>
+          <img className='detail__img' src={product.image} />
+        </div>
+        <div className='detail__text'>
+          <h3 className='detail__category'>{product.category}</h3>
+          <p className='detail__description'>{product.description}</p>
+          <div className='detail__down'>
+            <h3 className='detail__price'>{`$${product.price}`}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
