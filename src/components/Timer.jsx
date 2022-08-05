@@ -16,8 +16,9 @@ function Timer({ setBool }) {
       } else {
         setSeconds(seconds - 1);
       }
-      clearInterval(interval);
+      return () => (clearInterval(interval));
     }, 1000);
+    return () => clearInterval(interval);
   }, [seconds, minutes]);
 
   const min = minutes<10 ? `0${minutes}`:`${minutes}`
