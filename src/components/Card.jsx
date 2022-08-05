@@ -20,7 +20,7 @@ function Card({ product }) {
       <h3 className= "card__title">{product.title}</h3>
       <div className='card__down'>
         <Timer setBool = {setBool}/>
-        <button type="button" className="card__button" onClick={handleClick}>Detail</button>
+        <button type="button" className={bool?"card__button":"card__button--null"} onClick={handleClick}>Detail</button>
       </div>
     </div>
   );

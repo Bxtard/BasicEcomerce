@@ -60,3 +60,16 @@
   align-items: center;
   background-color: #403cc2;
 }
+.card__button--null{
+  border: none;
+  min-width: 80px;
+  height: 40px;
+  padding: 0 30px;
+  color: white;
+  display: inline-flex;
+  border-radius: 40px;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #DADADA;
+}
