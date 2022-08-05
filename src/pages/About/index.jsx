@@ -1,6 +1,6 @@
 const aprendido = ["html", "css", "react"]
 
-function About() {
+const About = () => {
   return (
     <div className="about">
       <div className="about__imgContainer">

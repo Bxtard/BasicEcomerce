@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 
-function NavBar () {
+const NavBar = () => {
   return(
     <div className="nav">
       <Link to="/" className="nav__containerLogo">

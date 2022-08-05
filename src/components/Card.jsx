@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Timer from './Timer';
-function Card(props) {
+function Card({ product }) {
   const navigate = useNavigate();
   const [bool,setBool] = useState(true);
-  const { product } = props;
 
   const handleClick = () => {
     if (bool) {

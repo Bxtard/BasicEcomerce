@@ -1,4 +1,4 @@
-function Error404() {
+const Error404 = () => {
   return <h1>404 page not Found</h1>;
 }
 

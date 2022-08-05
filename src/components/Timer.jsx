@@ -16,13 +16,12 @@ function Timer({ setBool }) {
       } else {
         setSeconds(seconds - 1);
       }
-      clearInterval(interval);
     }, 1000);
+    clearInterval(interval);
   }, [seconds, minutes]);
 
   const min = minutes<10 ? `0${minutes}`:`${minutes}`
   const sec = seconds<10 ? `0${seconds}`:`${seconds}`
-  /* return <h4>{`${minutes} : ${seconds}`}</h4>; */
   return <h4>{ `${min}:${sec}`}</h4>;
 }
 
